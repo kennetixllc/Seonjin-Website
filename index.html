@@ -1,373 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seonjin Bangkok - Stronger with Seonjin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-teal: #006D77;
-            --accent-lime: #B9FBC0;
-            --neutral-dark: #14213D;
-            --background-black: #000000;
-            --text-white: #FFFFFF;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seonjin Bangkok – Stronger with Seonjin</title>
 
-            /* Thai Flag Colors - For Logo or subtle elements if needed */
-            --thai-red: #A51931;
-            --thai-white: #F4F5F8;
-            --thai-blue: #2D2A4A;
-        }
+  <!-- Montserrat as before -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet"
+  />
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-black);
-            /* Background Pattern - COMPLETE SVG DATA URI */
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006D77' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            background-size: 60px 60px;
-            background-repeat: repeat;
-            background-attachment: fixed;
-            color: var(--text-white);
-            line-height: 1.6;
-        }
+  <!-- Font Awesome for social icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-yH8LXV6+0qN+OFroIkJ487x3u5m9sS5mTnmaBuYxBjCpxkS/+Il8H6/OV7mqMzVnAgzRx+MUB+2puBiVYbr+MQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <style>
+    :root {
+      --primary-teal: #006D77;
+      --accent-lime:  #B9FBC0;
+      --neutral-dark: #14213D;
+      --background-black: #000000;
+      --text-white:   #FFFFFF;
+    }
 
-        /* Hero Section */
-        .hero {
-            /* YOUR ACTUAL HERO BACKGROUND IMAGE */
-            background: url('/gym_background.png') center center/cover no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            position: relative;
-            color: var(--text-white);
-            overflow: hidden;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay to make text readable over background */
-            z-index: 1;
-        }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--background-black) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006D77' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+        center/60px repeat fixed;
+      color: var(--text-white);
+      line-height: 1.6;
+    }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .hero .logo-img {
-            width: 200px; /* Adjust as needed */
-            height: auto;
-            margin-bottom: 20px;
-        }
-        /* For a minimalist text logo with bold sans-serif typography */
-        .hero .logo-text {
-            font-size: 5em;
-            font-weight: 900;
-            color: var(--primary-teal);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
+    /* Hero */
+    .hero {
+      background: url("gym_background.png") center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content .logo-img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    .hero-content .tagline {
+      font-size: 2.5em;
+      font-weight: 700;
+      color: var(--accent-lime);
+      margin-bottom: 30px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: var(--accent-lime);
+      color: var(--neutral-dark);
+      padding: 15px 35px;
+      font-weight: 700;
+      font-size: 1.1em;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta-button:hover {
+      background: var(--primary-teal);
+      color: var(--text-white);
+      transform: translateY(-3px);
+    }
 
-        .hero .tagline {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 40px;
-            color: var(--accent-lime);
-        }
+    /* Sections */
+    section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2.8em;
+      font-weight: 900;
+      color: var(--primary-teal);
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      font-size: 1.1em;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid var(--neutral-dark);
+      margin: 60px auto;
+      width: 80%;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent-lime);
-            color: var(--neutral-dark);
-            padding: 18px 40px;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    /* About */
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .about-image {
+      width: 350px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+    .about-text {
+      max-width: 600px;
+      text-align: left;
+    }
 
-        .cta-button:hover {
-            background-color: var(--primary-teal);
-            color: var(--text-white);
-            transform: translateY(-3px);
-        }
+    /* Services */
+    .services-grid {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-item {
+      background: var(--neutral-dark);
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+      transition: transform 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .service-item:hover {
+      transform: translateY(-8px);
+    }
+    .service-item h3 {
+      color: var(--accent-lime);
+      margin-bottom: 15px;
+    }
 
-        /* Section Styling */
-        .section {
-            padding: 80px 0;
-            text-align: center;
-            border-bottom: 1px solid var(--neutral-dark);
-        }
+    /* Booking */
+    #booking {
+      background: var(--neutral-dark);
+      color: var(--text-white);
+    }
+    #booking a.cta-button {
+      background: var(--accent-lime);
+    }
 
-        .section:last-of-type {
-            border-bottom: none;
-        }
+    /* Social */
+    .social-media .fa-stack {
+      font-size: 1.8em;
+    }
+    .social-icons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-icons a {
+      color: var(--text-white);
+      background: var(--primary-teal);
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .social-icons a:hover {
+      background: var(--accent-lime);
+      color: var(--neutral-dark);
+      transform: translateY(-4px);
+    }
 
-        h2 {
-            font-size: 3em;
-            font-weight: 900;
-            color: var(--primary-teal);
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    /* Footer */
+    footer {
+      background: var(--background-black);
+      color: var(--neutral-dark);
+      padding: 30px 0;
+      font-size: 0.9em;
+    }
 
-        p {
-            font-size: 1.1em;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-            color: var(--text-white);
-        }
-
-        /* About Section Specifics */
-        .about-content {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px; /* Space between image and text */
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            max-width: 1000px; /* Constrain content width */
-            margin: 0 auto;
-        }
-
-        .about-image {
-            flex-shrink: 0; /* Prevents image from shrinking */
-            width: 350px; /* Adjust as needed for image size */
-            height: auto;
-            border-radius: 10px; /* Slightly rounded corners for the image */
-            object-fit: cover; /* Ensures image covers the area without distortion */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
-        }
-
-        .about-text {
-            flex-grow: 1; /* Allows text to take available space */
-            max-width: 600px; /* Max width for the text block */
-            text-align: left; /* Align text left within its container */
-        }
-
-        .about-text p {
-            margin: 0 0 20px 0; /* Adjust margin for paragraphs within this block */
-        }
-
-
-        /* Services Section */
-        .services-grid {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .service-item {
-            background-color: var(--neutral-dark);
-            padding: 40px;
-            border-radius: 10px;
-            width: 380px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .service-item:hover {
-            transform: translateY(-10px);
-        }
-
-        /* Styling for the icon area, even without an <img> tag */
-        .service-icon-area {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px auto;
-        }
-
-        .service-item h3 {
-            font-size: 1.8em;
-            color: var(--accent-lime);
-            margin-bottom: 15px;
-        }
-
-        .service-item p {
-            font-size: 1em;
-            color: var(--text-white);
-            margin: 0;
-        }
-
-        /* Booking Section */
-        .booking-section {
-            padding: 80px 0;
-            text-align: center;
-            background-color: var(--neutral-dark);
-            border-bottom: 1px solid var(--neutral-dark);
-        }
-
-        .booking-section p {
-            margin-bottom: 40px;
-            color: var(--text-white);
-        }
-
-        /* Social Media Section */
-        .social-media-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .social-media-icons a {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background-color: var(--primary-teal);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            text-decoration: none; /* Remove underline */
-            color: var(--text-white); /* Text color for placeholder text or icon font */
-            font-size: 1.8em; /* Size for placeholder text or icon font */
-            font-weight: 700;
-        }
-
-        .social-media-icons a:hover {
-            background-color: var(--accent-lime);
-            transform: translateY(-5px);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--background-black);
-            padding: 40px 0;
-            text-align: center;
-            font-size: 0.9em;
-            color: var(--neutral-dark);
-        }
-
-        .footer .logo-small {
-            width: 50px;
-            height: auto;
-            vertical-align: middle;
-            margin-left: 10px;
-            filter: grayscale(100%) brightness(50%); /* Make small logo dark/muted */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
-                gap: 30px;
-                text-align: center;
-            }
-            .about-image {
-                width: 80%; /* Adjust image width on smaller screens */
-                max-width: 350px;
-            }
-            .about-text {
-                max-width: 90%;
-                text-align: center; /* Center text when image stacks */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero .logo-text {
-                font-size: 3em;
-            }
-            .hero .tagline {
-                font-size: 1.8em;
-            }
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 1em;
-            }
-            h2 {
-                font-size: 2.2em;
-            }
-            .services-grid {
-                flex-direction: column;
-                align-items: center;
-            }
-            .service-item {
-                width: 90%;
-                max-width: 400px;
-            }
-        }
-    </style>
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .about-text, .about-content {
+        text-align: center;
+      }
+      .cta-button { padding: 12px 25px; }
+    }
+  </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-content">
-            <img src="/seonjin_logo.jpg" alt="Seonjin Bangkok Logo" class="logo-img">
-            <p class="tagline">Stronger with Seonjin</p>
-            <a href="#booking" class="cta-button">Start Your Journey</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content container">
+      <img src="seonjin_logo.jpg" alt="Seonjin Bangkok Logo" class="logo-img" />
+      <p class="tagline">Stronger with Seonjin</p>
+      <a href="#booking" class="cta-button">Start Your Journey</a>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <h2>About Seonjin</h2>
+      <div class="about-content">
+        <img
+          src="seonjin_animated.jpg"
+          alt="Seonjin – Personal Trainer"
+          class="about-image"
+        />
+        <div class="about-text">
+          <p>
+            Seonjin is a highly experienced and dedicated personal trainer and
+            nutrition coach based in the vibrant city of Bangkok. With a
+            passion for empowering individuals to achieve their fitness goals,
+            Seonjin combines science-backed training methodologies with
+            personalized nutrition plans to deliver transformative results.
+          </p>
+          <p>
+            Whether you’re looking to build strength, lose weight, or improve
+            your overall well-being, Seonjin is committed to guiding you every
+            step of the way with a friendly, results-driven approach.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    ---
+  <hr />
 
-    <section id="about" class="section about">
-        <div class="container">
-            <h2>About Seonjin</h2>
-            <div class="about-content">
-                <img src="/seonjin_animated.jpg" alt="Seonjin - Personal Trainer" class="about-image">
-                <div class="about-text">
-                    <p>Seonjin is a highly experienced and dedicated personal trainer and nutrition coach based in the vibrant city of Bangkok. With a passion for empowering individuals to achieve their fitness goals, Seonjin combines science-backed training methodologies with personalized nutrition plans to deliver transformative results.</p>
-                    <p>Whether you're looking to build strength, lose weight, or improve your overall well-being, Seonjin is committed to guiding you every step of the way with a friendly, results-driven approach.</p>
-                </div>
-            </div>
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Personal Training</h3>
+          <p>
+            Tailored workout programs—from strength and conditioning to
+            functional fitness—ensuring proper form and consistent progress.
+          </p>
         </div>
-    </section>
-
-    ---
-
-    <section id="services" class="section services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <div class="service-icon-area"></div> <h3>Personal Training</h3>
-                    <p>Experience tailored workout programs designed to maximize your potential. From strength and conditioning to functional fitness, our one-on-one sessions ensure proper form and consistent progress.</p>
-                </div>
-                <div class="service-item">
-                    <div class="service-icon-area"></div> <h3>Nutrition Assistance</h3>
-                    <p>Unlock your body's full potential with personalized nutrition guidance. Learn sustainable eating habits that complement your training and fuel your body for optimal performance and health.</p>
-                </div>
-            </div>
+        <div class="service-item">
+          <h3>Nutrition Assistance</h3>
+          <p>
+            Personalized nutrition guidance to fuel your body for optimal
+            performance and help you build sustainable healthy habits.
+          </p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    ---
+  <hr />
 
-    <section id="booking" class="booking-section">
-        <div class="container">
-            <h2>Book Your Session</h2>
-            <p>Ready to get started? Schedule your initial consultation or training session today. Seonjin will work with you to understand your goals and create a path to success.</p>
-            <a href="https://calendly.com/your-seonjin-link" target="_blank" class="cta-button">Book Now</a>
-            </div>
-    </section>
+  <!-- BOOKING -->
+  <section id="booking">
+    <div class="container">
+      <h2>Book Your Session</h2>
+      <p>
+        Ready to get started? Schedule your initial consultation or training
+        session today. Seonjin will work with you to understand your goals and
+        create a path to success.
+      </p>
+      <a
+        href="https://calendly.com/your-seonjin-link"
+        target="_blank"
+        class="cta-button"
+        >Book Now</a
+      >
+    </div>
+  </section>
 
-    ---
+  <hr />
 
-    <section class="section social-media">
-        <div class="container">
-            <h2>Connect With Us</h2>
-            <div class="social-media-icons">
-                <a href="
+  <!-- SOCIAL MEDIA -->
+  <section class="social-media">
+    <div class="container">
+      <h2>Connect With Us</h2>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      &copy; 2025 Seonjin Bangkok. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
