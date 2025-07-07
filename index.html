@@ -57,12 +57,14 @@
     .hero-content {
       position: relative;
       z-index: 1;
-      background-color: transparent; /* Ensure its background is transparent */
+      background-color: transparent;
     }
     .hero-content .logo-img {
-      max-width: 200px;
+      /* --- CHANGE MADE HERE: Increased max-width for bigger logo --- */
+      max-width: 350px; /* Increased from 200px */
+      height: auto; /* Ensure aspect ratio is maintained */
       margin-bottom: 20px;
-      background-color: transparent; /* Ensure the image's own background is transparent */
+      background-color: transparent;
     }
     .hero-content .tagline {
       font-size: 2.5em;
@@ -154,8 +156,6 @@
       width: 80px;
       height: 80px;
       margin-bottom: 20px;
-      /* Remove filter if icons are already colored as desired */
-      /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); */
     }
     .service-item h3 {
       color: var(--accent-lime);
@@ -184,7 +184,7 @@
       margin-top: 20px;
     }
     .social-icons a {
-      color: var(--text-white); /* Text color if using text or Font Awesome */
+      color: var(--text-white);
       background: var(--primary-teal);
       width: 60px;
       height: 60px;
@@ -203,8 +203,6 @@
     .social-icons img {
       width: 30px; /* Adjust size of social icons */
       height: 30px;
-      /* Remove filter if icons are already colored as desired */
-      /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); */
     }
 
     /* Footer */
