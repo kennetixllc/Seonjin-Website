@@ -10,14 +10,6 @@
     rel="stylesheet"
   />
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-yH8LXV6+0qN+OFroIkJ487x3u5m9sS5mTnmaBuYxBjCpxkS/+Il8H6/OV7mqMzVnAgzRx+MUB+2puBiVYbr+MQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
-
   <style>
     :root {
       --primary-teal: #006D77;
@@ -60,19 +52,17 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.7); /* This is a semi-transparent black overlay */
+      background: rgba(0,0,0,0.7);
     }
     .hero-content {
       position: relative;
       z-index: 1;
-      /* ADDED: Ensure its background is transparent */
-      background-color: transparent; 
+      background-color: transparent; /* Ensure its background is transparent */
     }
     .hero-content .logo-img {
       max-width: 200px;
       margin-bottom: 20px;
-      /* ADDED: Ensure the image's own background is transparent */
-      background-color: transparent; 
+      background-color: transparent; /* Ensure the image's own background is transparent */
     }
     .hero-content .tagline {
       font-size: 2.5em;
@@ -159,9 +149,22 @@
     .service-item:hover {
       transform: translateY(-8px);
     }
+    /* Updated service icon area for image-based icons */
+    .service-item .service-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+      /* Remove filter if icons are already colored as desired */
+      /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); */
+    }
     .service-item h3 {
       color: var(--accent-lime);
       margin-bottom: 15px;
+    }
+    .service-item p {
+      font-size: 1em;
+      color: var(--text-white);
+      margin: 0;
     }
 
     /* Booking */
@@ -173,10 +176,7 @@
       background: var(--accent-lime);
     }
 
-    /* Social */
-    .social-media .fa-stack {
-      font-size: 1.8em;
-    }
+    /* Social Media */
     .social-icons {
       display: flex;
       gap: 25px;
@@ -184,7 +184,7 @@
       margin-top: 20px;
     }
     .social-icons a {
-      color: var(--text-white);
+      color: var(--text-white); /* Text color if using text or Font Awesome */
       background: var(--primary-teal);
       width: 60px;
       height: 60px;
@@ -199,6 +199,12 @@
       background: var(--accent-lime);
       color: var(--neutral-dark);
       transform: translateY(-4px);
+    }
+    .social-icons img {
+      width: 30px; /* Adjust size of social icons */
+      height: 30px;
+      /* Remove filter if icons are already colored as desired */
+      /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); */
     }
 
     /* Footer */
@@ -215,6 +221,11 @@
         text-align: center;
       }
       .cta-button { padding: 12px 25px; }
+      h2 { font-size: 2.2em; }
+    }
+    @media (max-width: 480px) {
+      .hero-content .tagline { font-size: 1.8em; }
+      .service-item { width: 100%; }
     }
   </style>
 </head>
@@ -306,9 +317,11 @@
     <div class="container">
       <h2>Connect With Us</h2>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#" aria-label="Line"><img src="line.png" alt="Line"></a>
+        <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" target="_blank" aria-label="TikTok"><img src="tiktok.png" alt="TikTok"></a>
+        <a href="#" aria-label="X (Twitter)"><img src="x.png" alt="X (Twitter)"></a>
       </div>
     </div>
   </section>
