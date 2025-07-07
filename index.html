@@ -41,7 +41,8 @@
 
         /* Hero Section */
         .hero {
-            background: url('https://via.placeholder.com/1920x1080/14213D/006D77?text=Bangkok+Gym+Skyline') center center/cover no-repeat; /* Placeholder image */
+            /* YOUR ACTUAL HERO BACKGROUND IMAGE */
+            background: url('gym_background.png') center center/cover no-repeat;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -60,7 +61,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7); /* Dark overlay, slightly increased opacity to subdue pattern */
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay to make text readable over background */
             z-index: 1;
         }
 
@@ -70,7 +71,7 @@
             padding: 20px;
         }
 
-        .hero .logo-img { /* Changed class from .logo to .logo-img for clarity */
+        .hero .logo-img {
             width: 200px; /* Adjust as needed */
             height: auto;
             margin-bottom: 20px;
@@ -190,11 +191,16 @@
             transform: translateY(-10px);
         }
 
-        .service-item img {
+        /* Styling for the icon area, even without an <img> tag */
+        .service-icon-area {
             width: 80px;
             height: 80px;
-            margin-bottom: 20px;
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); /* Make placeholder icons white */
+            margin: 0 auto 20px auto;
+            /* If you add an icon image, you can use background-image here */
+            /* background-image: url('your-pt-icon.png'); */
+            /* background-size: cover; */
+            /* background-position: center; */
+            /* Or use an icon font like FontAwesome and add a <i> tag in HTML */
         }
 
         .service-item h3 {
@@ -241,17 +247,14 @@
             align-items: center;
             transition: background-color 0.3s ease, transform 0.3s ease;
             text-decoration: none; /* Remove underline */
+            color: var(--text-white); /* Text color for placeholder text or icon font */
+            font-size: 1.8em; /* Size for placeholder text or icon font */
+            font-weight: 700;
         }
 
         .social-media-icons a:hover {
             background-color: var(--accent-lime);
             transform: translateY(-5px);
-        }
-
-        .social-media-icons img {
-            width: 30px;
-            height: 30px;
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(285deg) brightness(108%) contrast(100%); /* Make placeholder icons white */
         }
 
         /* Footer */
@@ -329,7 +332,7 @@
         <div class="container">
             <h2>About Seonjin</h2>
             <div class="about-content">
-                <img src="seojin-animated.jpg" alt="Seonjin - Personal Trainer" class="about-image">
+                <img src="seojin_animated.jpg" alt="Seonjin - Personal Trainer" class="about-image">
                 <div class="about-text">
                     <p>Seonjin is a highly experienced and dedicated personal trainer and nutrition coach based in the vibrant city of Bangkok. With a passion for empowering individuals to achieve their fitness goals, Seonjin combines science-backed training methodologies with personalized nutrition plans to deliver transformative results.</p>
                     <p>Whether you're looking to build strength, lose weight, or improve your overall well-being, Seonjin is committed to guiding you every step of the way with a friendly, results-driven approach.</p>
@@ -345,13 +348,11 @@
             <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80/000000/FFFFFF?text=PT" alt="Personal Training Icon">
-                    <h3>Personal Training</h3>
+                    <div class="service-icon-area"></div> <h3>Personal Training</h3>
                     <p>Experience tailored workout programs designed to maximize your potential. From strength and conditioning to functional fitness, our one-on-one sessions ensure proper form and consistent progress.</p>
                 </div>
                 <div class="service-item">
-                    <img src="https://via.placeholder.com/80/000000/FFFFFF?text=Nutri" alt="Nutrition Assistance Icon">
-                    <h3>Nutrition Assistance</h3>
+                    <div class="service-icon-area"></div> <h3>Nutrition Assistance</h3>
                     <p>Unlock your body's full potential with personalized nutrition guidance. Learn sustainable eating habits that complement your training and fuel your body for optimal performance and health.</p>
                 </div>
             </div>
@@ -375,14 +376,11 @@
             <h2>Connect With Us</h2>
             <div class="social-media-icons">
                 <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" target="_blank" aria-label="TikTok">
-                    <img src="https://via.placeholder.com/30/000000/FFFFFF?text=T" alt="TikTok Icon">
-                </a>
+                    T </a>
                 <a href="https://www.instagram.com/your-seonjin-instagram" target="_blank" aria-label="Instagram">
-                    <img src="https://via.placeholder.com/30/000000/FFFFFF?text=I" alt="Instagram Icon">
-                </a>
+                    I </a>
                 <a href="https://www.facebook.com/your-seonjin-facebook" target="_blank" aria-label="Facebook">
-                    <img src="https://via.placeholder.com/30/000000/FFFFFF?text=F" alt="Facebook Icon">
-                </a>
+                    F </a>
             </div>
         </div>
     </section>
