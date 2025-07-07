@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seonjin Bangkok – Stronger with Seonjin</title>
 
-  <!-- Montserrat as before -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Font Awesome for social icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -62,15 +60,19 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.7); /* This is a semi-transparent black overlay */
     }
     .hero-content {
       position: relative;
       z-index: 1;
+      /* ADDED: Ensure its background is transparent */
+      background-color: transparent; 
     }
     .hero-content .logo-img {
       max-width: 200px;
       margin-bottom: 20px;
+      /* ADDED: Ensure the image's own background is transparent */
+      background-color: transparent; 
     }
     .hero-content .tagline {
       font-size: 2.5em;
@@ -218,7 +220,6 @@
 </head>
 <body>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-content container">
       <img src="seonjin_logo.png" alt="Seonjin Bangkok Logo" class="logo-img" />
@@ -229,7 +230,6 @@
 
   <hr />
 
-  <!-- ABOUT -->
   <section id="about">
     <div class="container">
       <h2>About Seonjin</h2>
@@ -259,7 +259,6 @@
 
   <hr />
 
-  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
@@ -284,7 +283,6 @@
 
   <hr />
 
-  <!-- BOOKING -->
   <section id="booking">
     <div class="container">
       <h2>Book Your Session</h2>
@@ -304,7 +302,6 @@
 
   <hr />
 
-  <!-- SOCIAL MEDIA -->
   <section class="social-media">
     <div class="container">
       <h2>Connect With Us</h2>
@@ -316,7 +313,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       &copy; 2025 Seonjin Bangkok. All rights reserved.
