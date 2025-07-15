@@ -23,9 +23,13 @@
     body:not(.lang-en) .lang-th { display: inline !important; }
     body.lang-en .lang-th { display: none !important; }
     body.lang-en .lang-en { display: inline !important; }
+    /* Global section heading centering */
+    section .container { text-align: center; }
+    /* Hero styling */
     .hero { background: url("gym_background.png") center/cover no-repeat; height: 90vh; display: flex; align-items: center; justify-content: center; position: relative; }
     .hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.7); }
     .hero-content { position: relative; text-align: center; z-index: 1; }
+    /* Ensure logo path is correct */
     .logo-img { max-width: 200px; margin-bottom: 20px; }
     .tagline { font-size: 2.5em; font-weight: 700; color: var(--accent-lime); margin-bottom: 20px; }
     .cta-button { display: inline-block; background: var(--accent-lime); color: var(--neutral-dark); padding: 12px 30px; font-weight: 700; border-radius: 5px; text-decoration: none; transition: 0.3s; }
@@ -52,9 +56,10 @@
     <button id="btn-th">ไทย</button>
     <button id="btn-en">EN</button>
   </div>
+
   <section class="hero">
     <div class="hero-content container">
-      <img src="seonjin_logo.jpg" alt="Seonjin Logo" class="logo-img" />
+      <img src="./seonjin_logo.jpg" alt="Seonjin Logo" class="logo-img" />
       <p class="tagline">
         <span class="lang lang-th">แข็งแรงขึ้นไปกับซอนจิน</span>
         <span class="lang lang-en">Stronger with Seonjin</span>
@@ -65,12 +70,14 @@
       </a>
     </div>
   </section>
+
   <hr />
+
   <section id="about">
     <div class="container">
       <h2><span class="lang lang-th">เกี่ยวกับซอนจิน</span><span class="lang lang-en">About Seonjin</span></h2>
       <div class="about-content">
-        <img src="seonjin_animated.jpg" alt="Seonjin Image" class="about-image" />
+        <img src="./seonjin_animated.jpg" alt="Seonjin Image" class="about-image" />
         <div class="about-text">
           <p><span class="lang lang-th">ซอนจินเป็นโค้ชฟิตเนสและผู้เชี่ยวชาญด้านโภชนาการที่มีประสบการณ์ในกรุงเทพฯ พร้อมให้คำแนะนำและพัฒนาแผนการฝึกสอนที่ออกแบบเฉพาะบุคคล เพื่อให้ลูกค้าทุกคนบรรลุเป้าหมายทั้งด้านรูปร่างและสุขภาพ</span><span class="lang lang-en">Seonjin is a highly experienced and dedicated personal trainer based in Bangkok, blending science-backed training methods with personalized nutrition plans to deliver transformative results.</span></p>
           <p><span class="lang lang-th">ด้วยแนวทางที่เน้นความมีวินัย การพัฒนาตามเป้าหมาย และการดูแลที่ใกล้ชิด ซอนจินมุ่งมั่นที่จะช่วยให้คุณแข็งแรงขึ้นทั้งร่างกายและจิตใจ ไม่ว่าคุณจะเพิ่งเริ่มต้นหรือมีประสบการณ์แล้ว ซอนจินพร้อมพาคุณสู่เป้าหมายที่คุณต้องการ</span><span class="lang lang-en">Whether you’re looking to build strength, lose weight, or improve your overall well-being, Seonjin is committed to guiding you every step of the way with a friendly, results-driven approach.</span></p>
@@ -78,7 +85,9 @@
       </div>
     </div>
   </section>
+
   <hr />
+
   <section id="services">
     <div class="container">
       <h2><span class="lang lang-th">บริการของเรา</span><span class="lang lang-en">Our Services</span></h2>
@@ -92,8 +101,11 @@
           <p><span class="lang lang-th">ให้คำแนะนำด้านโภชนาการอย่างเหมาะสมกับเป้าหมายของคุณ ทั้งการวางแผนมื้ออาหาร การคำนวณสารอาหาร และการสร้างนิสัยที่ดีต่อสุขภาพในระยะยาว</span><span class="lang lang-en">Personalized nutrition guidance to fuel your body for optimal performance and help you build sustainable healthy habits.</span></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
   <hr />
+
   <section id="booking">
     <div class="container">
       <h2><span class="lang lang-th">จองคิวกับซอนจิน</span><span class="lang lang-en">Book Your Session</span></h2>
@@ -101,7 +113,9 @@
       <a href="https://calendly.com/your-seonjin-link" class="cta-button"><span class="lang lang-th">จองตอนนี้</span><span class="lang lang-en">Book Now</span></a>
     </div>
   </section>
+
   <hr />
+
   <section class="social-media">
     <div class="container">
       <h2><span class="lang lang-th">ติดตามเรา</span><span class="lang lang-en">Connect With Us</span></h2>
@@ -110,43 +124,7 @@
         <a href="https://www.instagram.com/YOUR-INSTAGRAM" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://line.me/ti/p/YOUR-LINE-LINK" aria-label="Line"><i class="fab fa-line"></i></a>
         <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://twitter.com/YOUR-TWITTER" aria-label="X"><i class="fab fa-x-twitter"></i></a>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <p><span class="lang lang-th">© 2025 Seonjin Bangkok. สงวนลิขสิทธิ์.</span><span class="lang lang-en">© 2025 Seonjin Bangkok. All rights reserved.</span></p>
-    </div>
-  </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', ()=>{
-      const btnTH=document.getElementById('btn-th'), btnEN=document.getElementById('btn-en'), b=document.body;
-      </div>
-    </div>
-  </section>
-
-  <hr />
-
-  <section id="booking">
-    <div class="container">
-      <h2><span class="lang lang-th">จองเซสชันของคุณ</span><span class="lang lang-en">Book Your Session</span></h2>
-      <p><span class="lang lang-th">พร้อมที่จะเริ่มต้นแล้วหรือยัง? กำหนดเวลาการปรึกษาเบื้องต้นหรือการฝึกอบรมของคุณวันนี้ Seonjin จะทำงานร่วมกับคุณเพื่อทำความเข้าใจเป้าหมายของคุณและสร้างเส้นทางสู่ความสำเร็จ</span><span class="lang lang-en">Ready to get started? Schedule your initial consultation or training session today. Seonjin will work with you to understand your goals and create a path to success.</span></p>
-      <a href="https://calendly.com/your-seonjin-link" class="cta-button"><span class="lang lang-th">จองตอนนี้</span><span class="lang lang-en">Book Now</span></a>
-    </div>
-  </section>
-
-  <hr />
-
-  <section class="social-media">
-    <div class="container">
-      <h2><span class="lang lang-th">เชื่อมต่อกับเรา</span><span class="lang lang-en">Connect With Us</span></h2>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Line"><i class="fab fa-line"></i></a>
-        <a href="https://www.tiktok.com/@pirisamzung1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://twitter.com/YOUR-TWITTER" aria-label="X"><i class="fab fa-x"></i></a>
       </div>
     </div>
   </section>
