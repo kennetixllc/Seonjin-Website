@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seonjin Bangkok – Stronger with Seonjin</title>
+  <title>Seonjin Bangkok – แข็งแรงขึ้นไปกับซอนจิน</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yH8LXV6+0qN+OFroIkJ487x3u5m9sS5mTnmaBuYxBjCpxkS/+Il8H6/OV7mqMzVnAgzRx+MUB+2puBiVYbr+MQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
     :root {
       --primary-teal: #006D77;
@@ -26,29 +25,8 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
-      text-align: center !important;
+      text-align: center;
     }
-    }
-    .lang-switcher {
-      text-align: right;
-      padding: 10px 20px;
-    }
-    .lang-switcher button {
-      background: transparent;
-      border: 1px solid var(--text-white);
-      color: var(--text-white);
-      padding: 5px 10px;
-      margin-left: 5px;
-      cursor: pointer;
-      border-radius: 3px;
-      font-size: 0.9em;
-    }
-
-    /* Language visibility */
-    .lang-th, .lang-en { display: none; }
-    body:not(.lang-en) .lang-th { display: inline; }
-    body.lang-en       .lang-en { display: inline; }
-
     .hero {
       background: url("gym_background.png") center/cover no-repeat;
       height: 90vh;
@@ -65,7 +43,6 @@
     }
     .hero-content {
       position: relative;
-      text-align: center;
       z-index: 1;
     }
     .logo-img {
@@ -124,10 +101,7 @@
       border-radius: 10px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
-    .about-text {
-      max-width: 600px;
-      text-align: left;
-    }
+    .about-text { max-width: 600px; text-align: left; }
     .services-grid {
       display: flex;
       gap: 30px;
@@ -141,35 +115,17 @@
       width: 280px;
       transition: transform 0.3s;
     }
-    .service-item:hover {
-      transform: translateY(-6px);
-    }
-    .service-item h3 {
-      color: var(--accent-lime);
-      margin-bottom: 10px;
-    }
+    .service-item:hover { transform: translateY(-6px); }
+    .service-item h3 { color: var(--accent-lime); margin-bottom: 10px; }
     .social-icons {
       display: flex;
       gap: 20px;
       justify-content: center;
       margin-top: 20px;
     }
-    .social-icons a {
-      color: var(--text-white);
-      background: var(--primary-teal);
-      width: 50px;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: 0.3s;
-      text-decoration: none;
-    }
-    .social-icons a:hover {
-      background: var(--accent-lime);
-      color: var(--neutral-dark);
-      transform: translateY(-4px);
+    .social-icons img {
+      width: 40px;
+      height: 40px;
     }
     footer {
       background: var(--background-black);
@@ -181,134 +137,67 @@
   </style>
 </head>
 <body>
-  <div class="lang-switcher">
-    <button id="btn-th">ไทย</button>
-    <button id="btn-en">EN</button>
-  </div>
-
   <section class="hero">
     <div class="hero-content container">
-      <img src="./seonjin_logo.png" alt="Seonjin Logo" class="logo-img">
+      <img src="seonjin_logo.png" alt="Seonjin Logo" class="logo-img">
       <p class="tagline">แข็งแรงขึ้นไปกับซอนจิน</p>
-      <a href="#booking" class="cta-button">
-        <span class="lang lang-th">เริ่มต้นเส้นทางของคุณ</span>
-        <span class="lang lang-en">Start Your Journey</span>
-      </a>
+      <a href="#booking" class="cta-button">เริ่มต้นเส้นทางของคุณ</a>
     </div>
   </section>
-
   <hr>
-
   <section id="about">
     <div class="container">
-      <h2>
-        <span class="lang lang-th">เกี่ยวกับซอนจิน</span>
-        <span class="lang lang-en">About Seonjin</span>
-      </h2>
+      <h2>เกี่ยวกับซอนจิน</h2>
       <div class="about-content">
-        <img src="./seonjin_animated.jpg" alt="Seonjin Image" class="about-image">
+        <img src="seonjin_animated.jpg" alt="Seonjin Image" class="about-image">
         <div class="about-text">
-          <p>
-            <span class="lang lang-th">ซอนจินเป็นโค้ชฟิตเนสและผู้เชี่ยวชาญด้านโภชนาการที่มีประสบการณ์ในกรุงเทพฯ พร้อมให้คำแนะนำและพัฒนาแผนการฝึกสอนที่ออกแบบเฉพาะบุคคล เพื่อให้ลูกค้าทุกคนบรรลุเป้าหมายทั้งด้านรูปร่างและสุขภาพ</span>
-            <span class="lang lang-en">Seonjin is a highly experienced and dedicated personal trainer based in Bangkok, blending science-backed training methods with personalized nutrition plans to deliver transformative results.</span>
-          </p>
-          <p>
-            <span class="lang lang-th">ด้วยแนวทางที่เน้นความมีวินัย การพัฒนาตามเป้าหมาย และการดูแลที่ใกล้ชิด ซอนจินมุ่งมั่นที่จะช่วยให้คุณแข็งแรงขึ้นทั้งร่างกายและจิตใจ ไม่ว่าคุณจะเพิ่งเริ่มต้นหรือมีประสบการณ์แล้ว ซอนจินพร้อมพาคุณสู่เป้าหมายที่คุณต้องการ</span>
-            <span class="lang lang-en">Whether you’re looking to build strength, lose weight, or improve your overall well-being, Seonjin is committed to guiding you every step of the way with a friendly, results-driven approach.</span>
-          </p>
+          <p>ซอนจินเป็นโค้ชฟิตเนสและผู้เชี่ยวชาญด้านโภชนาการที่มีประสบการณ์ในกรุงเทพฯ พร้อมให้คำแนะนำและพัฒนาแผนการฝึกสอนที่ออกแบบเฉพาะบุคคล เพื่อให้ลูกค้าทุกคนบรรลุเป้าหมายทั้งด้านรูปร่างและสุขภาพ</p>
+          <p>ด้วยแนวทางที่เน้นความมีวินัย การพัฒนาตามเป้าหมาย และการดูแลที่ใกล้ชิด ซอนจินมุ่งมั่นที่จะช่วยให้คุณแข็งแรงขึ้นทั้งร่างกายและจิตใจ ไม่ว่าคุณจะเพิ่งเริ่มต้นหรือมีประสบการณ์แล้ว ซอนจินพร้อมพาคุณสู่เป้าหมายที่คุณต้องการ</p>
         </div>
       </div>
     </div>
   </section>
-
   <hr>
-
   <section id="services">
     <div class="container">
-      <h2>
-        <span class="lang lang-th">บริการของเรา</span>
-        <span class="lang lang-en">Our Services</span>
-      </h2>
+      <h2>บริการของเรา</h2>
       <div class="services-grid">
         <div class="service-item">
-          <h3>
-            <span class="lang lang-th">เทรนส่วนตัว</span>
-            <span class="lang lang-en">Personal Training</span>
-          </h3>
-          <p>
-            <span class="lang lang-th">โปรแกรมออกกำลังกายเฉพาะบุคคล ทั้งการสร้างกล้ามเนื้อ การเพิ่มความแข็งแรง และการฝึกแบบฟังก์ชัน เพื่อให้คุณพัฒนาได้อย่างถูกวิธีและต่อเนื่อง</span>
-            <span class="lang lang-en">Tailored workout programs—from strength and conditioning to functional fitness—ensuring proper form and consistent progress.</span>
-          </p>
+          <h3>เทรนส่วนตัว</h3>
+          <p>โปรแกรมออกกำลังกายเฉพาะบุคคล ทั้งการสร้างกล้ามเนื้อ การเพิ่มความแข็งแรง และการฝึกแบบฟังก์ชัน เพื่อให้คุณพัฒนาได้อย่างถูกวิธีและต่อเนื่อง</p>
         </div>
         <div class="service-item">
-          <h3>
-            <span class="lang lang-th">โภชนาการและคำแนะนำเรื่องอาหาร</span>
-            <span class="lang lang-en">Nutrition Assistance</span>
-          </h3>
-          <p>
-            <span class="lang lang-th">ให้คำแนะนำด้านโภชนาการอย่างเหมาะสมกับเป้าหมายของคุณ ทั้งการวางแผนมื้ออาหาร การคำนวณสารอาหาร และการสร้างนิสัยที่ดีต่อสุขภาพในระยะยาว</span></span>
-            <span class="lang lang-en">Personalized nutrition guidance to fuel your body for optimal performance and help you build sustainable healthy habits.</span>
-          </p>
+          <h3>โภชนาการและคำแนะนำเรื่องอาหาร</h3>
+          <p>ให้คำแนะนำด้านโภชนาการอย่างเหมาะสมกับเป้าหมายของคุณ ทั้งการวางแผนมื้ออาหาร การคำนวณสารอาหาร และการสร้างนิสัยที่ดีต่อสุขภาพในระยะยาว</p>
         </div>
       </div>
     </div>
   </section>
-
   <hr>
-
   <section id="booking">
     <div class="container">
-      <h2>
-        <span class="lang lang-th">จองคิวกับซอนจิน</span>
-        <span class="lang lang-en">Book Your Session</span>
-      </h2>
-      <p>
-        <span class="lang lang-th">พร้อมเริ่มต้นหรือยัง? นัดหมายเพื่อปรึกษาหรือเริ่มคอร์สกับซอนจินวันนี้ ซอนจินจะช่วยวางแผนและออกแบบเส้นทางการพัฒนาตามเป้าหมายของคุณอย่างเหมาะสม</span>
-        <span class="lang lang-en">Ready to get started? Schedule your initial consultation or training session today. Seonjin will work with you to understand your goals and create a path to success.</span>
-      </p>
-      <a href="https://calendly.com/your-seonjin-link" class="cta-button">
-        <span class="lang lang-th">จองตอนนี้</span>
-        <span class="lang lang-en">Book Now</span>
-      </a>
+      <h2>จองคิวกับซอนจิน</h2>
+      <p>พร้อมเริ่มต้นหรือยัง? นัดหมายเพื่อปรึกษาหรือเริ่มคอร์สกับซอนจินวันนี้ ซอนจินจะช่วยวางแผนและออกแบบเส้นทางการพัฒนาตามเป้าหมายของคุณอย่างเหมาะสม</p>
+      <a href="https://calendly.com/your-seonjin-link" class="cta-button">จองตอนนี้</a>
     </div>
   </section>
-
   <hr>
-
   <section class="social-media">
     <div class="container">
-      <h2>
-        <span class="lang lang-th">ติดตามเรา</span>
-        <span class="lang lang-en">Connect With Us</span>
-      </h2>
+      <h2>ติดตามเรา</h2>
       <div class="social-icons">
-        <a href="https://www.facebook.com/YOUR-FB-PROFILE" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/YOUR-INSTAGRAM" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://line.me/ti/p/YOUR-LINE-LINK" aria-label="Line"><i class="fab fa-line"></i></a>
-        <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-        <a href="https://twitter.com/YOUR-TWITTER" aria-label="X"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/YOUR-FB-PROFILE" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/YOUR-INSTAGRAM" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+        <a href="https://line.me/ti/p/YOUR-LINE-LINK" aria-label="Line"><img src="line.png" alt="Line"></a>
+        <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" aria-label="TikTok"><img src="tiktok.png" alt="TikTok"></a>
+        <a href="https://twitter.com/YOUR-TWITTER" aria-label="Twitter"><img src="x.png" alt="Twitter"></a>
       </div>
     </div>
   </section>
-
   <footer>
     <div class="container">
-      <p>
-        <span class="lang lang-th">© 2025 Seonjin Bangkok. สงวนลิขสิทธิ์.</span>
-        <span class="lang lang-en">© 2025 Seonjin Bangkok. All rights reserved.</span>
-      </p>
+      <p>© 2025 Seonjin Bangkok. สงวนลิขสิทธิ์.</p>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btnTH = document.getElementById('btn-th');
-      const btnEN = document.getElementById('btn-en');
-      const b = document.body;
-      if (localStorage.getItem('site-lang') === 'en') b.classList.add('lang-en');
-      btnTH.addEventListener('click', () => { b.classList.remove('lang-en'); localStorage.setItem('site-lang', 'th'); });
-      btnEN.addEventListener('click', () => { b.classList.add('lang-en'); localStorage.setItem('site-lang', 'en'); });
-    });
-  </script>
 </body>
 </html>
