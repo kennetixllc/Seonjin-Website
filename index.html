@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Seonjin Bangkok – Stronger with Seonjin</title>
 
+  <!-- Montserrat Font -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
     rel="stylesheet"
+  />
+
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-yH8LXV6+0qN+OFroIkJ487x3u5m9sS5mTnmaBuYxBjCpxkS/+Il8H6/OV7mqMzVnAgzRx+MUB+2puBiVYbr+MQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
 
   <style>
@@ -15,37 +25,46 @@
       --primary-teal: #006D77;
       --accent-lime:  #B9FBC0;
       --neutral-dark: #14213D;
-      --background-black: #000000;
-      --text-white:   #FFFFFF;
+      --background-black: #000;
+      --text-white:   #fff;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background: var(--background-black) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006D77' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zm0-30V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
-        center/60px repeat fixed;
+      background: var(--background-black);
       color: var(--text-white);
       line-height: 1.6;
     }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
+    /* Language toggle */
+    .lang-switcher { text-align: right; padding: 10px 20px; }
+    .lang-switcher button {
+      background: transparent;
+      border: 1px solid var(--text-white);
+      color: var(--text-white);
+      padding: 5px 10px;
+      margin-left: 5px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 0.9em;
     }
 
-    /* Hero */
+    /* Hide both by default */
+    .lang { display: none; }
+    /* Show Thai unless .lang-en on body */
+    body:not(.lang-en) .lang-th { display: inline; }
+    /* Show English only when .lang-en set */
+    body.lang-en       .lang-en { display: inline; }
+
+    /* Hero styling */
     .hero {
       background: url("gym_background.png") center/cover no-repeat;
-      height: 100vh;
+      height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
       position: relative;
     }
     .hero::before {
@@ -54,31 +73,15 @@
       inset: 0;
       background: rgba(0,0,0,0.7);
     }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      background-color: transparent;
-    }
-    .hero-content .logo-img {
-      /* --- CHANGE MADE HERE: Increased max-width for bigger logo --- */
-      max-width: 350px; /* Increased from 200px */
-      height: auto; /* Ensure aspect ratio is maintained */
-      margin-bottom: 20px;
-      background-color: transparent;
-    }
-    .hero-content .tagline {
-      font-size: 2.5em;
-      font-weight: 700;
-      color: var(--accent-lime);
-      margin-bottom: 30px;
-    }
+    .hero-content { position: relative; text-align: center; z-index: 1; }
+    .logo-img { max-width: 200px; margin-bottom: 20px; }
+    .tagline { font-size: 2.5em; font-weight: 700; color: var(--accent-lime); margin-bottom: 20px; }
     .cta-button {
       display: inline-block;
       background: var(--accent-lime);
       color: var(--neutral-dark);
-      padding: 15px 35px;
+      padding: 12px 30px;
       font-weight: 700;
-      font-size: 1.1em;
       border-radius: 5px;
       text-decoration: none;
       transition: 0.3s;
@@ -89,177 +92,82 @@
       transform: translateY(-3px);
     }
 
-    /* Sections */
-    section {
-      padding: 80px 0;
-      text-align: center;
-    }
-    h2 {
-      font-size: 2.8em;
-      font-weight: 900;
-      color: var(--primary-teal);
-      margin-bottom: 40px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-    p {
-      max-width: 800px;
-      margin: 0 auto 20px;
-      font-size: 1.1em;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid var(--neutral-dark);
-      margin: 60px auto;
-      width: 80%;
-    }
+    section { padding: 60px 0; }
+    h2 { font-size: 2.5em; font-weight: 900; color: var(--primary-teal); margin-bottom: 30px; }
+    p { max-width: 800px; margin: 0 auto 20px; font-size: 1.1em; }
+    hr { border: none; border-top: 1px solid var(--neutral-dark); margin: 40px auto; width: 80%; }
 
     /* About */
-    .about-content {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .about-image {
-      width: 350px;
-      max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-    }
-    .about-text {
-      max-width: 600px;
-      text-align: left;
-    }
+    .about-content { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; justify-content: center; }
+    .about-image { width: 350px; max-width: 90%; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); }
+    .about-text { max-width: 600px; text-align: left; }
 
     /* Services */
-    .services-grid {
-      display: flex;
-      gap: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .service-item {
-      background: var(--neutral-dark);
-      padding: 30px;
-      border-radius: 10px;
-      width: 300px;
-      transition: transform 0.3s;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .service-item:hover {
-      transform: translateY(-8px);
-    }
-    /* Updated service icon area for image-based icons */
-    .service-item .service-icon {
-      width: 80px;
-      height: 80px;
-      margin-bottom: 20px;
-    }
-    .service-item h3 {
-      color: var(--accent-lime);
-      margin-bottom: 15px;
-    }
-    .service-item p {
-      font-size: 1em;
-      color: var(--text-white);
-      margin: 0;
-    }
+    .services-grid { display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; }
+    .service-item { background: var(--neutral-dark); padding: 25px; border-radius: 8px; width: 280px; transition: transform 0.3s; }
+    .service-item:hover { transform: translateY(-6px); }
+    .service-item h3 { color: var(--accent-lime); margin-bottom: 10px; }
 
-    /* Booking */
-    #booking {
-      background: var(--neutral-dark);
-      color: var(--text-white);
-    }
-    #booking a.cta-button {
-      background: var(--accent-lime);
-    }
-
-    /* Social Media */
-    .social-icons {
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      margin-top: 20px;
-    }
+    /* Social icons */
+    .social-icons { display: flex; gap: 20px; justify-content: center; margin-top: 20px; }
     .social-icons a {
       color: var(--text-white);
       background: var(--primary-teal);
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      transition: 0.3s;
+      width: 50px; height: 50px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 50%; transition: 0.3s;
       text-decoration: none;
     }
-    .social-icons a:hover {
-      background: var(--accent-lime);
-      color: var(--neutral-dark);
-      transform: translateY(-4px);
-    }
-    .social-icons img {
-      width: 30px; /* Adjust size of social icons */
-      height: 30px;
-    }
+    .social-icons a:hover { background: var(--accent-lime); color: var(--neutral-dark); transform: translateY(-4px); }
 
-    /* Footer */
-    footer {
-      background: var(--background-black);
-      color: var(--neutral-dark);
-      padding: 30px 0;
-      font-size: 0.9em;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      .about-text, .about-content {
-        text-align: center;
-      }
-      .cta-button { padding: 12px 25px; }
-      h2 { font-size: 2.2em; }
-    }
-    @media (max-width: 480px) {
-      .hero-content .tagline { font-size: 1.8em; }
-      .service-item { width: 100%; }
-    }
+    footer { background: var(--background-black); color: var(--neutral-dark); text-align: center; padding: 20px 0; font-size: 0.9em; }
   </style>
 </head>
 <body>
+  <!-- language switcher -->
+  <div class="lang-switcher">
+    <button id="btn-th">ไทย</button>
+    <button id="btn-en">EN</button>
+  </div>
 
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content container">
-      <img src="seonjin_logo.png" alt="Seonjin Bangkok Logo" class="logo-img" />
-      <p class="tagline">Stronger with Seonjin</p>
-      <a href="#booking" class="cta-button">Start Your Journey</a>
+      <img src="seonjin_logo.jpg" alt="Seonjin Logo" class="logo-img" />
+      <p class="tagline">
+        <span class="lang lang-th">TODO: เขียนสโลแกนภาษาไทยที่นี่</span>
+        <span class="lang lang-en">Stronger with Seonjin</span>
+      </p>
+      <a href="#booking" class="cta-button">
+        <span class="lang lang-th">TODO: ข้อความปุ่ม CTA ภาษาไทย</span>
+        <span class="lang lang-en">Start Your Journey</span>
+      </a>
     </div>
   </section>
 
   <hr />
 
+  <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <h2>About Seonjin</h2>
+      <h2>
+        <span class="lang lang-th">เกี่ยวกับ Seonjin</span>
+        <span class="lang lang-en">About Seonjin</span>
+      </h2>
       <div class="about-content">
-        <img
-          src="seonjin_animated.jpg"
-          alt="Seonjin – Personal Trainer"
-          class="about-image"
-        />
+        <img src="seonjin_animated.jpg" alt="Seonjin Image" class="about-image" />
         <div class="about-text">
           <p>
-            Seonjin is a highly experienced and dedicated personal trainer and
-            nutrition coach based in the vibrant city of Bangkok. With a
-            passion for empowering individuals to achieve their fitness goals,
-            Seonjin combines science-backed training methodologies with
-            personalized nutrition plans to deliver transformative results.
+            <span class="lang lang-th">TODO: ย่อหน้าแรกภาษาไทยที่นี่</span>
+            <span class="lang lang-en">
+              Seonjin is a highly experienced and dedicated personal trainer...
+            </span>
           </p>
           <p>
-            Whether you’re looking to build strength, lose weight, or improve
-            your overall well-being, Seonjin is committed to guiding you every
-            step of the way with a friendly, results-driven approach.
+            <span class="lang lang-th">TODO: ย่อหน้าภาษาไทยเพิ่มเติมที่นี่</span>
+            <span class="lang lang-en">
+              Whether you’re looking to build strength, lose weight, or improve...
+            </span>
           </p>
         </div>
       </div>
@@ -268,22 +176,36 @@
 
   <hr />
 
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <h2>Our Services</h2>
+      <h2>
+        <span class="lang lang-th">บริการของเรา</span>
+        <span class="lang lang-en">Our Services</span>
+      </h2>
       <div class="services-grid">
         <div class="service-item">
-          <h3>Personal Training</h3>
+          <h3>
+            <span class="lang lang-th">การฝึกอบรมส่วนบุคคล</span>
+            <span class="lang lang-en">Personal Training</span>
+          </h3>
           <p>
-            Tailored workout programs—from strength and conditioning to
-            functional fitness—ensuring proper form and consistent progress.
+            <span class="lang lang-th">TODO: คำอธิบายบริการภาษาไทย</span>
+            <span class="lang lang-en">
+              Tailored workout programs—from strength and conditioning...
+            </span>
           </p>
         </div>
         <div class="service-item">
-          <h3>Nutrition Assistance</h3>
+          <h3>
+            <span class="lang lang-th">ความช่วยเหลือด้านโภชนาการ</span>
+            <span class="lang lang-en">Nutrition Assistance</span>
+          </h3>
           <p>
-            Personalized nutrition guidance to fuel your body for optimal
-            performance and help you build sustainable healthy habits.
+            <span class="lang lang-th">TODO: คำอธิบายบริการภาษาไทย</span>
+            <span class="lang lang-en">
+              Personalized nutrition guidance to fuel your body for optimal...
+            </span>
           </p>
         </div>
       </div>
@@ -292,43 +214,68 @@
 
   <hr />
 
+  <!-- BOOKING -->
   <section id="booking">
     <div class="container">
-      <h2>Book Your Session</h2>
+      <h2>
+        <span class="lang lang-th">จองเซสชันของคุณ</span>
+        <span class="lang lang-en">Book Your Session</span>
+      </h2>
       <p>
-        Ready to get started? Schedule your initial consultation or training
-        session today. Seonjin will work with you to understand your goals and
-        create a path to success.
+        <span class="lang lang-th">TODO: ข้อความแนะนำภาษาไทยที่นี่</span>
+        <span class="lang lang-en">
+          Ready to get started? Schedule your initial consultation or session...
+        </span>
       </p>
-      <a
-        href="https://calendly.com/your-seonjin-link"
-        target="_blank"
-        class="cta-button"
-        >Book Now</a
-      >
+      <a href="https://calendly.com/your-seonjin-link" class="cta-button">
+        <span class="lang lang-th">จองตอนนี้</span>
+        <span class="lang lang-en">Book Now</span>
+      </a>
     </div>
   </section>
 
   <hr />
 
+  <!-- SOCIAL MEDIA -->
   <section class="social-media">
     <div class="container">
-      <h2>Connect With Us</h2>
+      <h2>
+        <span class="lang lang-th">เชื่อมต่อกับเรา</span>
+        <span class="lang lang-en">Connect With Us</span>
+      </h2>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook"><img src="facebook.png" alt="Facebook"></a>
-        <a href="#" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
-        <a href="#" aria-label="Line"><img src="line.png" alt="Line"></a>
-        <a href="https://www.tiktok.com/@pirisamzung1?_t=ZP-8xohbTmf7fz&_r=1" target="_blank" aria-label="TikTok"><img src="tiktok.png" alt="TikTok"></a>
-        <a href="#" aria-label="X (Twitter)"><img src="x.png" alt="X (Twitter)"></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Line"><i class="fab fa-line"></i></a>
+        <a href="https://www.tiktok.com/@pirisamzung1" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      &copy; 2025 Seonjin Bangkok. All rights reserved.
+      <p>
+        <span class="lang lang-th">© 2025 Seonjin Bangkok. สงวนลิขสิทธิ์.</span>
+        <span class="lang lang-en">© 2025 Seonjin Bangkok. All rights reserved.</span>
+      </p>
     </div>
   </footer>
 
+  <!-- Language toggle script -->
+  <script>
+    const btnTH = document.getElementById('btn-th');
+    const btnEN = document.getElementById('btn-en');
+    const body  = document.body;
+    if (localStorage.getItem('site-lang') === 'en') body.classList.add('lang-en');
+    btnTH.addEventListener('click', () => {
+      body.classList.remove('lang-en');
+      localStorage.setItem('site-lang','th');
+    });
+    btnEN.addEventListener('click', () => {
+      body.classList.add('lang-en');
+      localStorage.setItem('site-lang','en');
+    });
+  </script>
 </body>
 </html>
